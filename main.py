@@ -1,5 +1,4 @@
-from prefect import Flow, task
-
+from prefect import flow, task
 
 @task
 def task_one():
@@ -11,7 +10,7 @@ def task_two():
     print("Executing Task Two")
 
 
-@Flow
+@flow(name="main", log_prints=True)
 def flow():
     task_one()
     task_two()
