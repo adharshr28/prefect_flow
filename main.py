@@ -11,7 +11,7 @@ def task_two():
     print("Executing Task Two")
 
 
-@Flow()
+@Flow
 def flow():
     task_one()
     task_two()
